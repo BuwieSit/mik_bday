@@ -20,9 +20,8 @@ body {
     position: absolute;
     top: 0;
     left: 0;
+    opacity: 25%;
 
-   
-    
     
 }
 @keyframes static-shift {
@@ -39,11 +38,8 @@ body {
     font-size: 120px;
     color: white;
     font-family: "Jersey 10", serif;
-    text-shadow: white 0px 0px 20px;
-    animation-name: glow-text;
-    animation-duration: 0.5s;
-    animation-iteration-count: infinite;
-    animation-play-state: paused;
+    animation: glow-text 0.5s linear infinite paused both;
+
     
     
 }
@@ -123,17 +119,41 @@ body {
 
 
 @keyframes glow-text {
-    from {
+    0% {
         text-shadow: white 0px 0px 0px;
+
     }
-    to {
-        text-shadow: white 0px 0px 20px;
+    50% {
+        text-shadow: white 10px 0px 50px;
+
+    }
+    100% {
+        text-shadow: white 0px 0px 0px;
+
     }
 }
 img {
     width: 100%;
 }
+
+
 .cat {
+    
     position: absolute;
+    width: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+#oiacat2 {
     width: 200px;
+    transform: translate(150%, -10%);
+}
+
+#oiacat3 {
+    width: 200px;
+    transform: translate(-250%, -10%);
 }
