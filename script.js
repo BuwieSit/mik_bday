@@ -8,6 +8,8 @@ window.onload = function() {
     let cat3 = document.getElementById("oiacat3");
     let staticFilter = document.querySelector(".static-filter")
 
+    let celebration = new Audio("resources/club-music.mp3");
+   
 
     gift.addEventListener("mouseover", () => {
         white.style.transform = "translate(-50%, 0%)";
@@ -32,9 +34,16 @@ window.onload = function() {
             white.style.height = "50vh";
             console.log(clickCount++);
 
+            staticFilter.style.opacity = "0";
+
+
         } 
         else if (title.innerHTML === "CLICK THE GIFT") {
+
+            celebration.play();
+
             title.innerHTML = "HAPPY BIRTHDAY MIKMIK!";
+            staticFilter.style.opacity = "10%";
             white.style.height = "50vh";
             white.style.transform = "translate(-50%, 100%)";
             console.log(clickCount++);
@@ -44,7 +53,8 @@ window.onload = function() {
         }
 
         if (clickCount == 3) {
-            alert("CLicked 3 times");
+            
+            celebration.pause();
             staticFilter.style.opacity = "0";
             clickCount = 0;
             title.innerHTML = "HAPPY BIRTHDAY PRECIOUS!";
@@ -61,18 +71,21 @@ window.onload = function() {
             gift.style.pointerEvents = "none"
             oiaDance();
 
+            setTimeout(cake, 2000);
+
         } 
-
-        function oiaDance() {
-            let bdaySong = new Audio("resources/oiahappybday.mp3");
-            bdaySong.play();
-        }
-
-        function cake() {
-            
-        }
 
         
     });
+
+    function oiaDance() {
+        let bdaySong = new Audio("resources/oiahappybday.mp3");
+        bdaySong.play();
+    }
+
+    function cake() {
+        window.open('cake.html', '_blank');
+        
+    }
 
 }

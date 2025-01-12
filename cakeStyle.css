@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-image: url("resources/confettiBg.gif");
+    
+}
+
+.card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 50%;
+    background-image: linear-gradient(rgba(221, 220, 214, 0.6), rgba(224, 224, 224, 0.342));
+
+    /* mix-blend-mode: lighten; */
+    border-radius: 1%;
+    
+    border-color: tan;
+    display: flex;
+    flex-direction: row;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit; /* Matches the container's background */
+    filter: blur(10px); /* Apply the blur effect */
+    z-index: 0; /* Ensures it stays behind the content */
+}
+
+
+.left {
+    z-index: 1;
+    width: 30%;
+    height: 100%;
+    
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right {
+    z-index: 1;
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction:column ;
+    align-items: center;
+    
+    
+}
+#message {
+    font-family: "Montserrat", serif;
+    font-style: italic;
+    text-align: center;
+    margin-top: 5%;
+}
+#happy {
+    font-family: "Kaushan Script", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+}
+
+.cake {
+    position: absolute;
+    width: 175px;
+    height: 140px;
+    top: 50%;
+    left: 50%;
+    margin-top: -49px;
+    margin-left: -87.5px;
+}
+
+.plate {
+    width: 189px;
+    height: 77px;
+    position: absolute;
+    bottom: -7px;
+    left: -7px;
+    background-color: #ccc;
+    border-radius: 50%;
+    box-shadow:
+        0 1.4px 0 #b3b3b3,
+        0 2.8px 0 #b3b3b3,
+        0 3.5px 28px rgba(0, 0, 0, 0.5);
+}
+
+.cake > * {
+    position: absolute;
+}
+
+.layer {
+    position: absolute;
+    display: block;
+    width: 175px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #553c13;
+    box-shadow:
+        0 1.4px 0px #5e4314,
+        0 2.8px 0px #4a3310,
+        0 4.2px 0px #49320f,
+        0 5.6px 0px #48310f,
+        0 7px 0px #472f0e,
+        0 8.4px 0px #462e0e,
+        0 9.8px 0px #452d0d,
+        0 11.2px 0px #442c0d,
+        0 12.6px 0px #432b0c,
+        0 14px 0px #422a0c,
+        0 15.4px 0px #41290b,
+        0 16.8px 0px #40280b,
+        0 18.2px 0px #3f270a,
+        0 19.6px 0px #3e260a,
+        0 21px 0px #3d2509;
+}
+
+.layer-top {
+    top: 0px;
+}
+
+.layer-middle {
+    top: 23.1px;
+}
+
+.layer-bottom {
+    top: 46.2px;
+}
+
+.icing {
+    top: 1.4px;
+    left: 3.5px;
+    background-color: #f0e4d0;
+    width: 168px;
+    height: 63px;
+    border-radius: 50%;
+}
+
+.icing:before {
+    content: "";
+    position: absolute;
+    top: 2.8px;
+    right: 3.5px;
+    bottom: 4.2px;
+    left: 3.5px;
+    background-color: #f5e9d6;
+    box-shadow:
+        0 0 2.8px #f7ebd8,
+        0 0 2.8px #f7ebd8,
+        0 0 2.8px #f7ebd8;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.drip {
+    display: block;
+    width: 35px;
+    height: 42px;
+    border-bottom-left-radius: 17.5px;
+    border-bottom-right-radius: 17.5px;
+    background-color: #f0e4d0;
+}
+
+.drip1 {
+    top: 37.1px;
+    left: 3.5px;
+    transform: skewY(15deg);
+    height: 33.6px;
+    width: 28px;
+}
+
+.drip2 {
+    top: 48.3px;
+    left: 126.7px;
+    transform: skewY(-15deg);
+}
+
+.drip3 {
+    top: 37.8px;
+    left: 63px;
+    width: 56px;
+    border-bottom-left-radius: 28px;
+    border-bottom-right-radius: 28px;
+}
+
+.candle {
+    background-color: #7B020B;
+    width: 11.2px;
+    height: 35px;
+    border-radius: 5.6px / 2.8px;
+    top: -14px;
+    left: 50%;
+    margin-left: -5.6px;
+    z-index: 10;
+}
+
+.candle:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 11.2px;
+    height: 5.6px;
+    border-radius: 50%;
+    background-color: #8c0a13;
+}
+
+.flame {
+    position: absolute;
+    background-color: orange;
+    width: 10.5px;
+    height: 24.5px;
+    border-radius: 7px 7px 7px 7px / 17.5px 17.5px 7px 7px;
+    top: -23.8px;
+    left: 50%;
+    margin-left: -5.25px;
+    z-index: 10;
+    box-shadow:
+        0 0 7px rgba(255, 165, 0, 0.5),
+        0 0 14px rgba(255, 165, 0, 0.5),
+        0 0 42px rgba(255, 165, 0, 0.5),
+        0 0 56px rgba(255, 165, 0, 0.5);
+    transform-origin: 50% 90%;
+    animation: flicker 1s ease-in-out alternate infinite;
+}
+
+@keyframes flicker {
+    0% {
+        transform: skewX(5deg);
+        box-shadow:
+            0 0 7px rgba(255, 165, 0, 0.2),
+            0 0 14px rgba(255, 165, 0, 0.2),
+            0 0 42px rgba(255, 165, 0, 0.2),
+            0 0 56px rgba(255, 165, 0, 0.2);
+    }
+    25% {
+        transform: skewX(-5deg);
+        box-shadow:
+            0 0 7px rgba(255, 165, 0, 0.5),
+            0 0 14px rgba(255, 165, 0, 0.5),
+            0 0 42px rgba(255, 165, 0, 0.5),
+            0 0 56px rgba(255, 165, 0, 0.5);
+    }
+    50% {
+        transform: skewX(10deg);
+        box-shadow:
+            0 0 7px rgba(255, 165, 0, 0.3),
+            0 0 14px rgba(255, 165, 0, 0.3),
+            0 0 42px rgba(255, 165, 0, 0.3),
+            0 0 56px rgba(255, 165, 0, 0.3);
+    }
+    75% {
+        transform: skewX(-10deg);
+        box-shadow:
+            0 0 7px rgba(255, 165, 0, 0.4),
+            0 0 14px rgba(255, 165, 0, 0.4),
+            0 0 42px rgba(255, 165, 0, 0.4),
+            0 0 56px rgba(255, 165, 0, 0.4);
+    }
+    100% {
+        transform: skewX(5deg);
+        box-shadow:
+            0 0 7px rgba(255, 165, 0, 0.5),
+            0 0 14px rgba(255, 165, 0, 0.5),
+            0 0 42px rgba(255, 165, 0, 0.5),
+            0 0 56px rgba(255, 165, 0, 0.5);
+    }
+}
