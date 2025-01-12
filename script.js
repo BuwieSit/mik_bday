@@ -1,4 +1,27 @@
+
 window.onload = function() {
+    var date = new Date();
+    console.log(date);
+    var day = date.getDate();
+    console.log(day);
+    var hours = date.getHours();
+    console.log(hours);
+    var mins = date.getMinutes();
+    console.log(mins);
+
+    let body = document.body;
+
+    if (day == 13 && hours == 20) {
+        console.log("WORKING");
+        body.style.display = "block";
+    }
+
+    else {
+        body.style.display = "none";
+    }
+
+
+
     let gift = document.querySelector(".gift")
     let white = document.querySelector(".white-bg")
     let title = document.getElementById("title")
