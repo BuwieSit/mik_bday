@@ -11,14 +11,27 @@ body {
 }
 
 .static-filter {
-    background-color: white;
-    z-index: -5;
-    width: 100%;
+    background-image: url("resources/noise.png");
+    z-index: 5;
+    animation: static-shift 0.1s linear infinite both;
+    pointer-events: none;
+    width: 150%;
     height: 100vh;
     position: absolute;
     top: 0;
     left: 0;
+
+   
     
+    
+}
+@keyframes static-shift {
+    0% {
+        transform: translate(-10%);
+    }
+    100% {
+        transform: translate(-20%);
+    }
 }
 
 #title {
@@ -34,29 +47,6 @@ body {
     
     
 }
-
-.side-bars {
-    width: 10%;
-    height: 100%;
-    background-color: black;
-    position: absolute;
-    
-}
-#leftBar {
-    
-    top: 0;
-}
-
-#rightBar {
-    
-    top: 0;
-    right: 0;
-
-
-}
-
-
-
 
 .white-bg {
     width: 100%;
@@ -139,4 +129,11 @@ body {
     to {
         text-shadow: white 0px 0px 20px;
     }
+}
+img {
+    width: 100%;
+}
+.cat {
+    position: absolute;
+    width: 200px;
 }
